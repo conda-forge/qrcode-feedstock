@@ -5,7 +5,7 @@ Home: https://github.com/lincolnloop/python-qrcode
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: QR Code image generator
 
