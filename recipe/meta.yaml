@@ -1,27 +1,27 @@
-{% set version = "5.3" %}
+{% set version = "6.0" %}
 
 package:
   name: qrcode
   version: {{ version }}
 
 source:
-  fn: qrcode-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/q/qrcode/qrcode-{{ version }}.tar.gz
-  sha256: 4115ccee832620df16b659d4653568331015c718a754855caf5930805d76924e
+  sha256: 037b0db4c93f44586e37f84c3da3f763874fcac85b2974a69a98e399ac78e1bf
 
 build:
+  noarch: python
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - qr = qrcode.console_scripts:main
 
 requirements:
   build:
     - python
-    - setuptools
-    - six
+    - pip
   run:
     - python
+    - setuptools
     - six
     - colorama
 
