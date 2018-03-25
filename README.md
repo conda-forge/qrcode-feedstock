@@ -14,9 +14,7 @@ Summary: QR Code image generator.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/qrcode-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/qrcode-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/qrcode-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/qrcode-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/qrcode-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/qrcode-feedstock/branch/master)
+All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/qrcode-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/qrcode-feedstock)
 
 Current release info
 ====================
