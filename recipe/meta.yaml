@@ -35,9 +35,9 @@ test:
 
 about:
   home: https://github.com/lincolnloop/python-qrcode
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_file: LICENSE
-  summary: 'QR Code image generator.'
+  summary: 'QR Code image generator'
 
 extra:
   recipe-maintainers:
