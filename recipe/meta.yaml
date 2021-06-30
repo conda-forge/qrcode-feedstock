@@ -1,43 +1,45 @@
-{% set version = "6.1" %}
+{% set name = "qrcode" %}
+{% set version = "7.0" %}
+
 
 package:
-  name: qrcode
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/q/qrcode/qrcode-{{ version }}.tar.gz
-  sha256: 505253854f607f2abf4d16092c61d4e9d511a3b4392e60bff957a68592b04369
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/qrcode-{{ version }}.tar.gz
+  sha256: 963046df808fbcc9f28200108ce235128921af225302145238981913705ecaff
 
 build:
-  noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  noarch: python
   entry_points:
     - qr = qrcode.console_scripts:main
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
-    - python
+  host:
+    - python >=3.6
     - pip
   run:
-    - python
-    - setuptools
-    - six
+    - python >=3.6
     - colorama
 
 test:
   imports:
     - qrcode
     - qrcode.image
-    - qrcode.tests
   commands:
+    - pip check
     - qr --help
+  requires:
+    - pip
 
 about:
   home: https://github.com/lincolnloop/python-qrcode
+  summary: QR Code image generator
   license: BSD-3-Clause
   license_file: LICENSE
-  summary: 'QR Code image generator'
 
 extra:
   recipe-maintainers:
