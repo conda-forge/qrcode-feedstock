@@ -24,6 +24,8 @@ requirements:
   run:
     - python >=3.6
     - colorama
+    - typing-extensions
+    - pypng
 
 test:
   imports:
