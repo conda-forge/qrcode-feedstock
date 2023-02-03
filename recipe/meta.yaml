@@ -1,5 +1,5 @@
 {% set name = "qrcode" %}
-{% set version = "7.3.1" %}
+{% set version = "7.4.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/qrcode-{{ version }}.tar.gz
-  sha256: 375a6ff240ca9bd41adc070428b5dfc1dcfbb0f2507f1ac848f6cded38956578
+  sha256: 26185f4c48ea8a896d5c9a0b080c41b75448e30b533b418ea0c65d91d10f0901
 
 build:
   number: 0
