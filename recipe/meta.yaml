@@ -1,6 +1,6 @@
-{% set python_min = '3.9.0' %}
+{% set python_min = "3.9.0" %}
 {% set name = "qrcode" %}
-{% set version = "8.0" %}
+{% set version = "8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,14 +8,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/qrcode-{{ version }}.tar.gz
-  sha256: 025ce2b150f7fe4296d116ee9bad455a6643ab4f6e7dce541613a4758cbce347
+  sha256: e8df73caf72c3bace3e93d9fa0af5aa78267d4f3f5bc7ab1b208f271605a5e48
 
 build:
   entry_points:
     - qr = qrcode.console_scripts:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
